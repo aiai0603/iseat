@@ -1,0 +1,81 @@
+<!--pages/mine/mine.wxml-->
+<view>
+  <view class="card">
+      <view>
+          <view class="user">
+              <view class="name">
+                  {{name}}
+              </view>
+             <img src="../../img/admin.png" alt="" class="avater"></img>
+          </view>
+      </view>
+      <view class="bgc">
+          <view class="bgitem">
+              <view>
+                  {{time}}分钟
+              </view>
+              <view class="bgtitle">
+                累计预约时长
+              </view>
+          </view>
+          <view class="bgitem">
+              <view >
+                  {{count}}次
+              </view>
+              <view class="bgtitle">
+                累计预约次数
+              </view>
+          </view>
+          <view class="bgitem">
+              <view wx:if="{{flag===0}}">
+                 未预约
+              </view>
+              <view wx:else>
+                 已预约
+              </view>
+              <view class="bgtitle">
+                预约使用状态
+              </view>
+          </view>
+      </view>
+  </view>
+  <view>
+  <view class="tools">
+    <view class="list">
+      <view class="listitem">
+        <view>
+          历史预约
+        </view>
+        <view>
+          >
+        </view>
+      </view>
+      <view class="listitem">
+        <view>
+          帮助中心
+        </view>
+        <view>
+          >
+        </view>
+      </view>
+      <view class="listitem">
+        <view>
+          意见反馈
+        </view>
+        <view>
+          >
+        </view>
+      </view>
+      <view class="listitem">
+        <view>
+          设置
+        </view>
+        <view>
+          >
+        </view>
+      </view>
+    </view>
+  </view>
+  </view>
+   
+</view>

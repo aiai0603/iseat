@@ -1,0 +1,25 @@
+<!--index.wxml-->
+<view class="container">
+   <view class="login">
+        <view class="iconfont icon-yizi" style="font-size:180rpx;color:white;margin:20rpx 0"></view>
+        <view class="logo-wd">座位助手</view>
+   </view>
+   <view class="login-board">
+      <view class="login-title">请使用学号登录</view>
+      <view class="input">  
+          <view class="iconfont icon-yonghu input-icon" ></view>
+         <input type="text" placeholder="请输入账号"></input>
+      </view>
+      <view class="input">  
+          <view class="iconfont icon-mima input-icon" ></view>
+         <input type="text" placeholder="请输入密码"></input>
+      </view>
+      <view class="button" bindtap="enter">
+            登录
+      </view>
+      <view class="forget">
+         忘记密码
+      </view>
+     
+   </view>
+</view>

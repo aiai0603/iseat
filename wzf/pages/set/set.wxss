@@ -1,0 +1,86 @@
+/* pages/set/set.wxss */
+.set{
+  background-color: rgb(245 245 245);
+  display: flex;
+  width: 100%;
+  flex-flow: row;
+  padding-top: 30rpx;
+  border-radius: 30rpx;
+  
+}
+
+.title{
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  font-size: 32rpx;
+  line-height: 100rpx;
+}
+
+.mytitle{
+  justify-content: flex-start;
+  
+}
+.menu_box{
+  display: flex;
+  width: 30%;
+  
+  flex-flow: column;
+ }
+ .menu{
+  
+  font-size:30rpx;
+  line-height: 80rpx;
+  height:100rpx;
+  text-align: center;
+ }
+ .borders{
+    background-color: #3388ec;
+    color: white;
+ }
+
+
+ .menu_choose{
+  
+   background-color: #fff;
+   border-radius: 30rpx;
+   display: flex;
+   flex:1;
+   flex-flow: column;
+  
+  
+   align-items: center;
+ }
+
+ .tab{
+  width: 85%;
+ }
+
+ .chair{
+   display: flex;
+   flex-flow: row;
+   justify-content: start;
+   align-items:center;
+ }
+
+ .chair{
+  display: flex;
+  flex-flow: row;
+  justify-content: space-around;
+  align-items:center;
+}
+
+ .msg{
+   font-size: 32rpx;
+ }
+
+ .but{
+   font-size: 34rpx;
+   color: white;
+   font-weight: 600;
+   background-color: #3388ec;
+   padding:10rpx 30rpx;
+   border-radius: 30rpx;
+ }

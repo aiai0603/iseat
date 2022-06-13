@@ -1,0 +1,55 @@
+<!--pages/set/set.wxml-->
+<view class="set">
+
+
+<view class="menu_box">
+  <view class="title">
+    楼层选择
+  </view>
+ <text wx:for="{{erae}}" class='menu {{ menuTapCurrent==index?"borders":"" }}' data-current="{{index}}" catchtap="menuTap">F{{index+1}}</text>
+ 
+</view>
+<view class="menu_choose">
+  <view class="tab" hidden="{{menuTapCurrent!=index}}" wx:for="{{erae}}">
+    <view class="title mytitle">
+      区域选择
+    </view>
+    <view wx:for="{{erae[index]}}">
+        <view class="title mytitle">
+        {{item.id}}
+        </view>
+        <view class="chair" wx:if="{{item.now<item.max*2/5}}">
+          <view  wx:for="{{((item.now-item.max/5+1)/item.max*5)}}" class="iconfont icon-yizi" style="color: rgb(0,255,0);font-size:70rpx;margin:10rpx"></view>
+
+
+          <view  wx:for="{{(5-(item.now/item.max*5))}}" class="iconfont icon-yizi" style="font-size:70rpx;color:rgb(101,101,101);margin:10rpx"></view>
+        </view>
+        <view class="chair" wx:elif="{{item.now<item.max*4/5}}">
+          <view  wx:for="{{((item.now-item.max/5+1)/item.max*5)}}" class="iconfont icon-yizi" style="color: rgb(245 197 3);font-size:70rpx;margin:10rpx"></view>
+
+
+          <view  wx:for="{{(5-(item.now/item.max*5))}}" class="iconfont icon-yizi" style="font-size:70rpx;color:rgb(101,101,101);margin:10rpx"></view>
+        </view>
+        <view class="chair" wx:else="{{item.now<item.max*2/5}}">
+          <view  wx:for="{{((item.now-item.max/5+1)/item.max*5)}}" class="iconfont icon-yizi" style="color: rgb(255,0,0);font-size:70rpx;margin:10rpx"></view>
+
+
+          <view  wx:for="{{(5-(item.now/item.max*5))}}" class="iconfont icon-yizi" style="font-size:70rpx;color:rgb(101,101,101);margin:10rpx"></view>
+        </view>
+        <view class="chair" style="margin-top:10rpx">
+          <view class="msg">
+            座位预约情况 {{item.now}} / {{item.max}}
+          </view>
+          <view class="but">
+            预约
+          </view>
+        </view>
+    </view>
+
+
+  </view>
+
+</view>
+
+
+</view>

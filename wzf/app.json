@@ -1,0 +1,33 @@
+{
+  "pages":[
+    "pages/set/set",
+    "pages/notice/notice",
+   
+    "pages/mine/mine",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#3388ec",
+    "navigationBarTitleText": "座位助手",
+    "navigationBarTextStyle":"white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+   
+    "color": "white",
+    "selectedColor": "#3388ec",
+    "list":[{
+      "pagePath": "pages/notice/notice",
+      "text": "通知"
+    },{
+      "pagePath": "pages/set/set",
+      "text": "预约"
+    },{
+      "pagePath": "pages/mine/mine",
+      "text": "我的"
+    }]
+  }
+
+}

@@ -1,0 +1,43 @@
+basic:
+  # http server port
+  port: 8083
+  # tls
+#  tls:
+#    certfile: https-server.crt
+#    keyfile: https-server.key
+  #32bytes key for AES256
+  aeskey: passphrasewhichneedstobe32bytes!
+db:
+  host: localhost
+  user: postgres
+  password: postgres
+  dbname: dm
+  port: 5432
+logger:
+  # true|false, with debug level, it prints more debug info
+  debug: false
+  # true|false, if it's set to true, then the log will be print to console
+  consoleLog: false
+  # true|false, if it's set to true, then the log will be print to log file
+  fileLog: true
+basicAuth:
+  name: admin
+  password: admin123
+jwt:
+  # string, the secret key for jwt encryption
+  secret: anysecretbytearray
+  # int, how long will the jwt expire, in minutes
+  expiration: 16
+  # string, the secret key for jwt encryption
+  refreshSecret: anothersecret
+  # int, how long will the refresh token expire, in hours
+  refreshExpiration: 24
+# The policies about account lock out because of consecutive fail login attempts.
+# a user will be locked out for {durationMinutes} minutes after {maximumFailAttempts} invalid login attempts within a {countRangeMinutes} minute period
+accountLock:
+  # int, the maximum allowed consecutive fail attempts.
+  maximumFailAttempts: 5
+  # int, how long will be the account locked out in minutes. It must be bigger than countRangeMinutes
+  durationMinutes: 15
+  # int, the range of invalid attempts that will be counted as failure, in minutes
+  countRangeMinutes: 10
